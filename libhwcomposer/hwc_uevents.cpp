@@ -72,7 +72,7 @@ static void *uevent_loop(void *param)
 
     char thread_name[64] = "hwcUeventThread";
     prctl(PR_SET_NAME, (unsigned long) &thread_name, 0, 0, 0);
-    setpriority(PRIO_PROCESS, 0, HAL_PRIORITY_URGENT_DISPLAY);
+    androidSetThreadPriority(0, HAL_PRIORITY_URGENT_DISPLAY);
     uevent_init();
 
     while(1) {

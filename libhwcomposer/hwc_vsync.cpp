@@ -42,8 +42,8 @@ static void *vsync_loop(void *param)
 
     char thread_name[64] = "hwcVsyncThread";
     prctl(PR_SET_NAME, (unsigned long) &thread_name, 0, 0, 0);
-    setpriority(PRIO_PROCESS, 0, 
-                HAL_PRIORITY_URGENT_DISPLAY + ANDROID_PRIORITY_MORE_FAVORABLE);
+    androidSetThreadPriority(0, HAL_PRIORITY_URGENT_DISPLAY +
+                android::PRIORITY_MORE_FAVORABLE);
 
     static char vdata[PAGE_SIZE];
 
