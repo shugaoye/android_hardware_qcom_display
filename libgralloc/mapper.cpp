@@ -342,9 +342,9 @@ int gralloc_perform(struct gralloc_module_t const* module,
                 hnd->format = format;
                 *handle = (native_handle_t *)hnd;
                 res = 0;
-                break;
+                
 
-            }
+            } break;
         default:
             break;
     }
