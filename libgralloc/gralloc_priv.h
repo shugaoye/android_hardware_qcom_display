@@ -146,6 +146,11 @@ enum {
     /* Close Caption displayed on an external display only */
     GRALLOC_USAGE_PRIVATE_EXTERNAL_CC     =       0x000F0000,
 #endif
+    /* This flag is used for SECURE display usecase */
+    GRALLOC_USAGE_PRIVATE_SECURE_DISPLAY  =       0x00800000,
+
+    /* This flag is set for WFD usecase */
+    GRALLOC_USAGE_PRIVATE_WFD             =       0x00200000,
 };
 
 enum {
